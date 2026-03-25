@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kinoof Top — Deck de Présentation 2026</title>
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #050709;
+      --blue: #3aa0ff;
+      --orange: #ff7a1a;
+      --text: #f0f4fb;
+      --muted: #8494ab;
+      --line: rgba(255,255,255,.1);
+      --gradient: linear-gradient(130deg, #3aa0ff 0%, #ff7a1a 100%);
+    }
+
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .deck-page {
+      width: 1000px;
+      margin: 0 auto;
+      padding: 40px 0 80px;
+    }
+
+    /* SLIDES */
+    .slide {
+      width: 1000px;
+      min-height: 600px;
+      margin-bottom: 32px;
+      border-radius: 24px;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid var(--line);
+      page-break-after: always;
+    }
+
+    .gradient-text {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    /* SLIDE 1 — COVER */
+    .slide-cover {
+      background:
+        radial-gradient(ellipse at 20% 30%, rgba(58,160,255,.25) 0%, transparent 45%),
+        radial-gradient(ellipse at 80% 70%, rgba(255,122,26,.2) 0%, transparent 40%),
+        #050709;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 72px 80px;
+      min-height: 620px;
+    }
+
+    .slide-cover .brand-mark {
+      width: 72px; height: 72px;
+      border-radius: 20px;
+      background: var(--gradient);
+      display: grid;
+      place-items: center;
+      font-size: 2rem;
+      font-weight: 900;
+      color: white;
+      margin-bottom: 32px;
+      box-shadow: 0 20px 50px rgba(58,160,255,.25);
+    }
+
+    .slide-cover h1 {
+      font-size: 5.5rem;
+      font-weight: 900;
+      letter-spacing: -.07em;
+      line-height: .9;
+      margin-bottom: 24px;
+    }
+
+    .slide-cover .tagline {
+      font-size: 1.4rem;
+      color: #c8d8ef;
+      letter-spacing: .02em;
+      margin-bottom: 40px;
+    }
+
+    .slide-cover .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      font-size: .88rem;
+      color: #c8daef;
+      font-weight: 500;
+    }
+
+    .slide-cover .pill::before {
+      content: "";
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--gradient);
+    }
+
+    /* SLIDE HEADER */
+    .slide-header {
+      padding: 52px 64px;
+      background: linear-gradient(135deg, rgba(58,160,255,.07) 0%, rgba(255,122,26,.06) 100%);
+    }
+
+    .slide-label {
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 14px;
+    }
+
+    .slide-title {
+      font-size: 2.8rem;
+      font-weight: 900;
+      letter-spacing: -.05em;
+      line-height: 1;
+      margin-bottom: 14px;
+    }
+
+    .slide-subtitle {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 600px;
+      line-height: 1.65;
+    }
+
+    /* SLIDE CONTENT */
+    .slide-body {
+      padding: 40px 64px;
+    }
+
+    .slide-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .slide-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .slide-card {
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 24px;
+    }
+
+    .slide-card h3 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      letter-spacing: -.03em;
+    }
+
+    .slide-card p {
+      font-size: .88rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .badge-blue {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(58,160,255,.15);
+      border: 1px solid rgba(58,160,255,.3);
+      color: var(--blue);
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .badge-orange {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(255,122,26,.15);
+      border: 1px solid rgba(255,122,26,.3);
+      color: var(--orange);
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .badge-gold {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(255,200,80,.12);
+      border: 1px solid rgba(255,200,80,.25);
+      color: #ffcc50;
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    ul.check-list {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+      font-size: .88rem;
+      color: #c8d8ef;
+    }
+
+    ul.check-list li::before {
+      content: "✓ ";
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .pack-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .pack-cell {
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 20px;
+    }
+
+    .pack-cell.featured {
+      background: linear-gradient(135deg, rgba(58,160,255,.1), rgba(255,122,26,.1));
+      border-color: rgba(255,200,80,.2);
+    }
+
+    .pack-cell h4 {
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .pack-cell ul {
+      list-style: none;
+      font-size: .8rem;
+      color: var(--muted);
+      display: grid;
+      gap: 5px;
+    }
+
+    .pack-cell ul li::before {
+      content: "• ";
+      color: var(--blue);
+    }
+
+    /* CONTACT SLIDE */
+    .slide-contact {
+      background:
+        radial-gradient(ellipse at 10% 30%, rgba(58,160,255,.22) 0%, transparent 45%),
+        radial-gradient(ellipse at 90% 70%, rgba(255,122,26,.18) 0%, transparent 40%),
+        #050709;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 72px 80px;
+      min-height: 500px;
+    }
+
+    .slide-contact h2 {
+      font-size: 3.5rem;
+      font-weight: 900;
+      letter-spacing: -.07em;
+      margin-bottom: 20px;
+    }
+
+    .contact-pills {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .contact-pill {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 22px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+      font-size: .95rem;
+      font-weight: 600;
+    }
+
+    /* Top nav-like header on each page */
+    .deck-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background: rgba(255,255,255,.015);
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(20px);
+    }
+
+    .deck-nav .logo-mark {
+      width: 36px; height: 36px;
+      border-radius: 10px;
+      background: var(--gradient);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      font-size: 1rem;
+      color: white;
+    }
+
+    .deck-nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: -.03em;
+    }
+
+    .deck-nav-right {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn-dl {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 9px 18px;
+      border-radius: 11px;
+      font-size: .85rem;
+      font-weight: 700;
+      background: var(--gradient);
+      color: white;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 9px 18px;
+      border-radius: 11px;
+      font-size: .85rem;
+      font-weight: 700;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.1);
+      color: white;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    /* Print */
+    @media print {
+      .deck-nav { display: none; }
+      .slide { page-break-after: always; border: none; }
+      body { background: white; color: black; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- DECK NAV -->
+  <div class="deck-nav">
+    <div class="deck-nav-brand">
+      <div class="logo-mark">K</div>
+      <span>Kinoof Top — Deck 2026</span>
+    </div>
+    <div class="deck-nav-right">
+      <a href="../index.html" class="btn-back">← Retour au site</a>
+      <button class="btn-dl" onclick="window.print()">⬇ Télécharger PDF</button>
+    </div>
+  </div>
+
+  <div class="deck-page">
+
+    <!-- ══ SLIDE 1 — COVER ══ -->
+    <div class="slide slide-cover">
+      <div class="brand-mark">K</div>
+      <h1>
+        Kinoof<br>
+        <span class="gradient-text">Top</span>
+      </h1>
+      <p class="tagline">Control the Sound. Control the Vision.</p>
+      <div class="pill">Deck de présentation · 2026</div>
+    </div>
+
+    <!-- ══ SLIDE 2 — CONCEPT ══ -->
+    <div class="slide">
+      <div class="slide-header">
+        <div class="slide-label">01 — Concept</div>
+        <h2 class="slide-title">Not an event. <span class="gradient-text">A platform.</span></h2>
+        <p class="slide-subtitle">
+          Kinoof Top crée des expériences live et digitales premium où le public contrôle le son et l'image.
+        </p>
+      </div>
+      <div class="slide-body">
+        <div class="slide-grid-3">
+          <div class="slide-card">
+            <h3>🎯 Immersion</h3>
+            <p>Un environnement premium, pensé pour capter l'attention et l'émotion du public.</p>
+          </div>
+          <div class="slide-card">
+            <h3>🎛 Contrôle</h3>
+            <p>Chaque format donne au public une manière précise de vivre le son ou la vision.</p>
+          </div>
+          <div class="slide-card">
+            <h3>📡 Exploitation</h3>
+            <p>Chaque activation devient un contenu média durable, éditorialisable et partageable.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ SLIDE 3 — FORMATS ══ -->
+    <div class="slide">
+      <div class="slide-header">
+        <div class="slide-label">02 — Formats</div>
+        <h2 class="slide-title">Trois formats. <span class="gradient-text">Une signature.</span></h2>
+        <p class="slide-subtitle">Un système clair pour comprendre l'univers Kinoof Top.</p>
+      </div>
+      <div class="slide-body">
+        <div class="slide-grid-3">
+          <div class="slide-card" style="border-color:rgba(58,160,255,.3);">
+            <div class="badge-blue">KTS</div>
+            <h3>Control the Sound</h3>
+            <p>Expérience audio immersive, live session, silence maîtrisé, écoute premium et proximité émotionnelle.</p>
+            <br>
+            <ul class="check-list">
+              <li>Silent experience</li>
+              <li>Live session artistique</li>
+              <li>Format intimiste</li>
+            </ul>
+          </div>
+          <div class="slide-card" style="border-color:rgba(255,122,26,.3);">
+            <div class="badge-orange">KTV</div>
+            <h3>Control the Vision</h3>
+            <p>Narration visuelle, captation premium, diffusion de contenu fort et direction artistique.</p>
+            <br>
+            <ul class="check-list">
+              <li>Visual direction</li>
+              <li>Content first</li>
+              <li>Media experience</li>
+            </ul>
+          </div>
+          <div class="slide-card" style="background:linear-gradient(135deg,rgba(58,160,255,.08),rgba(255,122,26,.1));border-color:rgba(255,200,80,.2);">
+            <div class="badge-gold">KTX</div>
+            <h3>Full Experience</h3>
+            <p>L'expression premium maximale : son, vision, audience, lifestyle et puissance de marque.</p>
+            <br>
+            <ul class="check-list">
+              <li>KTS + KTV combinés</li>
+              <li>Brand impact maximal</li>
+              <li>Format flagship</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ SLIDE 4 — ABOUT ══ -->
+    <div class="slide">
+      <div class="slide-header">
+        <div class="slide-label">03 — À propos</div>
+        <h2 class="slide-title">Identité & <span class="gradient-text">Vision</span></h2>
+        <p class="slide-subtitle">Kinoof Top se positionne à la croisée de la musique, de l'événementiel, du lifestyle et des médias.</p>
+      </div>
+      <div class="slide-body">
+        <div class="slide-grid-2">
+          <div class="slide-card" style="background:linear-gradient(135deg,rgba(58,160,255,.08),rgba(255,122,26,.06));">
+            <h3 style="font-size:1.5rem;margin-bottom:16px;">Piliers</h3>
+            <ul class="check-list" style="gap:12px;">
+              <li>🎶 Music — Direction artistique centrée sur l'émotion</li>
+              <li>🎧 Technology — Outils immersifs innovants</li>
+              <li>🎥 Content — Chaque activation = objet média premium</li>
+              <li>🤝 Experience — Moments complets, esthétiques et mémorables</li>
+            </ul>
+          </div>
+          <div class="slide-card">
+            <h3 style="font-size:1.5rem;margin-bottom:16px;">Audience cible</h3>
+            <ul class="check-list" style="gap:12px;">
+              <li>18–40 ans, urbains, actifs</li>
+              <li>Créatifs, connectés, sensibles à la qualité</li>
+              <li>Kinshasa — Afrique centrale — Pan-africain</li>
+              <li>Early adopters de l'expérience premium</li>
+            </ul>
+            <br>
+            <div style="padding:14px;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid var(--line);margin-top:6px;">
+              <p style="font-size:.85rem;font-style:italic;color:#c8d8ef;">"Construire une culture du live premium en Afrique."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ SLIDE 5 — PARTNERSHIPS ══ -->
+    <div class="slide">
+      <div class="slide-header">
+        <div class="slide-label">04 — Partenariats</div>
+        <h2 class="slide-title">Packs de <span class="gradient-text">partenariat</span></h2>
+        <p class="slide-subtitle">Des collaborations pensées pour générer visibilité, contenu et impact culturel.</p>
+      </div>
+      <div class="slide-body">
+        <div class="pack-row">
+          <div class="pack-cell">
+            <h4>🥉 Bronze</h4>
+            <ul>
+              <li>Logo supports print</li>
+              <li>Mention digitale</li>
+              <li>1 invitation VIP</li>
+            </ul>
+          </div>
+          <div class="pack-cell">
+            <h4>🥈 Silver</h4>
+            <ul>
+              <li>Branding secondaire</li>
+              <li>Relais contenus</li>
+              <li>3 invitations VIP</li>
+              <li>Mention officielle</li>
+            </ul>
+          </div>
+          <div class="pack-cell featured">
+            <div class="badge-gold" style="font-size:.65rem;margin-bottom:6px;">★ Recommandé</div>
+            <h4>🥇 Gold</h4>
+            <ul>
+              <li>Co-branding officiel</li>
+              <li>Intégration expérience</li>
+              <li>Pack contenu média</li>
+              <li>5 invitations VIP</li>
+            </ul>
+          </div>
+          <div class="pack-cell">
+            <h4>💎 Exclusive</h4>
+            <ul>
+              <li>Exclusivité catégorie</li>
+              <li>Storytelling central</li>
+              <li>Campagne co-signée</li>
+              <li>10 VIP + lounge</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ SLIDE 6 — NEXT EVENT ══ -->
+    <div class="slide">
+      <div class="slide-header" style="background:linear-gradient(135deg,rgba(255,122,26,.1),rgba(58,160,255,.08));">
+        <div class="slide-label">05 — Prochain événement</div>
+        <h2 class="slide-title">Kinoof Top <span class="gradient-text">Sessions #01</span></h2>
+        <p class="slide-subtitle">Rooftop Kinshasa — 30 Avril 2026 — 19h00</p>
+      </div>
+      <div class="slide-body">
+        <div class="slide-grid-2">
+          <div class="slide-card">
+            <h3 style="font-size:1.2rem;">📍 Détails</h3>
+            <ul class="check-list" style="gap:8px;margin-top:10px;">
+              <li>Rooftop premium, Kinshasa</li>
+              <li>Format KTS + KTV</li>
+              <li>Capacité limitée et sélective</li>
+              <li>Artiste live + DJ set + networking</li>
+              <li>Captation vidéo et photo premium</li>
+            </ul>
+          </div>
+          <div class="slide-card" style="background:linear-gradient(135deg,rgba(37,211,102,.08),rgba(37,211,102,.04));">
+            <h3 style="font-size:1.2rem;">📞 Contact & Réservation</h3>
+            <div style="margin-top:14px;display:grid;gap:10px;">
+              <div style="padding:10px 14px;border-radius:10px;background:rgba(37,211,102,.1);border:1px solid rgba(37,211,102,.2);font-size:.9rem;">
+                WhatsApp: <strong>+243 815 334 097</strong>
+              </div>
+              <div style="padding:10px 14px;border-radius:10px;background:rgba(58,160,255,.08);border:1px solid rgba(58,160,255,.15);font-size:.9rem;">
+                Email: <strong>hello@kinooftop.com</strong>
+              </div>
+              <div style="padding:10px 14px;border-radius:10px;background:rgba(255,255,255,.04);border:1px solid var(--line);font-size:.9rem;">
+                Web: <strong>kinooftop.com</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ SLIDE 7 — CONTACT ══ -->
+    <div class="slide slide-contact">
+      <div style="width:64px;height:64px;border-radius:18px;background:var(--gradient);display:grid;place-items:center;font-size:2rem;font-weight:900;color:white;margin-bottom:28px;box-shadow:0 20px 50px rgba(58,160,255,.3);">K</div>
+      <h2>
+        Let's build<br>
+        <span class="gradient-text">something together.</span>
+      </h2>
+      <p style="color:var(--muted);font-size:1.1rem;margin-top:14px;max-width:500px;line-height:1.6;">
+        Événement · Partenariat · Collaboration · Contenu
+      </p>
+      <div class="contact-pills">
+        <div class="contact-pill">💬 +243 815 334 097</div>
+        <div class="contact-pill">✉ hello@kinooftop.com</div>
+        <div class="contact-pill">🌐 kinooftop.com</div>
+        <div class="contact-pill">📍 Kinshasa, RDC</div>
+      </div>
+    </div>
+
+  </div><!-- end deck-page -->
+
+</body>
+</html>

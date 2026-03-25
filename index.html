@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══ SEO ═══ -->
+  <title>Kinoof Top — Control the Sound. Control the Vision.</title>
+  <meta name="description" content="Kinoof Top développe des expériences live et digitales premium où le public contrôle le son et l'image. Plateforme d'expériences musicales, visuelles et culturelles à Kinshasa." />
+  <meta name="keywords" content="Kinoof Top, KTS, KTV, KTX, expérience live, événement premium, Kinshasa, musique immersive, contenu cinématographique, rooftop session" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Kinoof Top" />
+  <link rel="canonical" href="https://kinooftop.com/" />
+
+  <!-- ═══ OPEN GRAPH ═══ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kinooftop.com/" />
+  <meta property="og:title" content="Kinoof Top — Control the Sound. Control the Vision." />
+  <meta property="og:description" content="Plateforme d'expériences live premium : KTS · KTV · KTX. Événements immersifs, contenu cinématographique et culture à Kinshasa." />
+  <meta property="og:image" content="https://kinooftop.com/images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Kinoof Top" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <!-- ═══ TWITTER CARD ═══ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kinoof Top — Control the Sound. Control the Vision." />
+  <meta name="twitter:description" content="Plateforme d'expériences live premium : KTS · KTV · KTX." />
+  <meta name="twitter:image" content="https://kinooftop.com/images/og-image.jpg" />
+
+  <!-- ═══ FAVICON ═══ -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="apple-touch-icon" href="images/favicon.svg" />
+  <meta name="theme-color" content="#050709" />
+
+  <!-- ═══ FONTS ═══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- ═══ ICONS ═══ -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+
+  <!-- ═══ CSS ═══ -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <!-- ═══ SCHEMA.ORG ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Kinoof Top",
+    "url": "https://kinooftop.com",
+    "logo": "https://kinooftop.com/images/kinoof-top-logo.png",
+    "description": "Plateforme d'expériences live et digitales premium. KTS · KTV · KTX.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kinshasa",
+      "addressCountry": "CD"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+243815334097",
+      "contactType": "customer service",
+      "availableLanguage": ["fr", "en"]
+    },
+    "sameAs": [
+      "https://www.instagram.com/kinooftop",
+      "https://www.facebook.com/kinooftop",
+      "https://www.youtube.com/@kinooftop",
+      "https://www.tiktok.com/@kinooftop"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ═══ LOADER ═══ -->
+  <div class="loader" id="loader">
+    <div class="loader-logo">KINOOF TOP</div>
+    <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+  </div>
+
+  <!-- ═══ CURSOR GLOW (injected by JS) ═══ -->
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+
+      <!-- Brand -->
+      <a href="index.html" class="brand">
+        <span class="brand-mark">K</span>
+        <div class="brand-text">
+          Kinoof Top
+          <span>Control the sound.</span>
+        </div>
+      </a>
+
+      <!-- Desktop links -->
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="about.html">Kinoof Top</a>
+        <a href="formats.html">Formats</a>
+        <a href="media.html">Content</a>
+        <a href="events.html">Events</a>
+        <a href="partnerships.html">Partnerships</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <!-- Desktop CTA -->
+      <div class="nav-cta">
+        <a href="events.html#reserve" class="btn btn-secondary btn-sm">Réserver</a>
+        <a href="https://wa.me/243815334097" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+
+      <!-- Hamburger -->
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <!-- ═══ MOBILE NAV ═══ -->
+  <nav class="nav-mobile" id="navMobile" aria-label="Navigation mobile">
+    <a href="index.html"><i class="fa-solid fa-house fa-fw me-2"></i> Accueil</a>
+    <a href="about.html"><i class="fa-solid fa-circle-info fa-fw me-2"></i> Kinoof Top</a>
+    <a href="formats.html"><i class="fa-solid fa-layer-group fa-fw me-2"></i> Formats</a>
+    <a href="media.html"><i class="fa-solid fa-film fa-fw me-2"></i> Content</a>
+    <a href="events.html"><i class="fa-solid fa-calendar-days fa-fw me-2"></i> Events</a>
+    <a href="partnerships.html"><i class="fa-solid fa-handshake fa-fw me-2"></i> Partnerships</a>
+    <a href="contact.html"><i class="fa-solid fa-envelope fa-fw me-2"></i> Contact</a>
+    <div class="nav-mobile-cta">
+      <a href="events.html#reserve" class="btn btn-secondary btn-full">Réserver un ticket</a>
+      <a href="https://wa.me/243815334097" target="_blank" rel="noopener" class="btn btn-whatsapp btn-full">
+        <i class="fab fa-whatsapp"></i> WhatsApp direct
+      </a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <img
+        class="hero-bg-img"
+        src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=2000&q=80"
+        alt="Kinoof Top Live Experience — audience immersive"
+        loading="eager"
+      />
+      <div class="hero-bg-gradient"></div>
+      <div class="hero-grain"></div>
+    </div>
+
+    <!-- Glow spheres -->
+    <div class="glow-sphere glow-blue" style="width:500px;height:500px;top:-100px;left:-150px;opacity:.18;"></div>
+    <div class="glow-sphere glow-orange" style="width:400px;height:400px;bottom:0;right:-100px;opacity:.14;"></div>
+
+    <div class="container hero-content">
+
+      <div class="hero-tag" data-reveal>
+        <span>Live Experiences · Sound · Vision · Culture</span>
+      </div>
+
+      <h1 data-reveal data-reveal-delay="1">
+        Kinoof<br>
+        <span class="gradient-text">Top</span>
+      </h1>
+
+      <p class="hero-desc" data-reveal data-reveal-delay="2">
+        Kinoof Top développe des expériences live et digitales premium
+        où le public ne consomme pas seulement un événement :
+        il entre dans une immersion totale, scénarisée, visuelle et sonore.
+      </p>
+
+      <div class="hero-actions" data-reveal data-reveal-delay="3">
+        <a href="formats.html" class="btn btn-primary btn-xl">
+          <i class="fa-solid fa-play"></i> Explore Formats
+        </a>
+        <a href="events.html" class="btn btn-secondary btn-xl">
+          <i class="fa-solid fa-calendar-star"></i> Next Event
+        </a>
+        <a href="https://wa.me/243815334097" target="_blank" rel="noopener" class="btn btn-whatsapp btn-xl">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+
+      <div class="hero-stats" data-reveal data-reveal-delay="4">
+        <div class="hero-stat">
+          <h3>KTS</h3>
+          <p>Le format centré sur le son, le silence maîtrisé et l'écoute immersive.</p>
+        </div>
+        <div class="hero-stat">
+          <h3>KTV</h3>
+          <p>Le format centré sur l'image, le contenu et la puissance visuelle.</p>
+        </div>
+        <div class="hero-stat">
+          <h3>KTX</h3>
+          <p>L'expérience complète : musique, image, ambiance, présence et culture.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll cue -->
+    <div class="scroll-cue">
+      <div class="scroll-cue-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════════════════
+       CONCEPT
+  ════════════════════════════════════════════════════ -->
+  <section class="section" id="concept" style="background: radial-gradient(ellipse at 10% 50%, rgba(58,160,255,.06) 0%, transparent 40%);">
+    <div class="container">
+
+      <div style="max-width:700px; margin-bottom:52px;">
+        <span class="section-eyebrow" data-reveal>Concept</span>
+        <h2 class="section-title" data-reveal data-reveal-delay="1">Experience.<br>Immersion. Control.</h2>
+        <p class="section-subtitle" data-reveal data-reveal-delay="2">
+          Une plateforme qui fusionne événementiel, technologie et contenu premium dans un univers urbain, moderne et émotionnel.
+        </p>
+      </div>
+
+      <div class="concept-grid" data-reveal>
+        <div class="highlight-panel">
+          <h3>Kinoof Top crée des expériences live et digitales où le public contrôle le son et l'image.</h3>
+          <p>
+            Le projet ne se limite pas à organiser des événements. Il construit une plateforme, une signature
+            et un langage visuel capable de vivre en temps réel et bien au-delà du live grâce au contenu.
+          </p>
+          <a href="about.html" class="btn btn-primary">Découvrir la plateforme <i class="fa-solid fa-arrow-right ms-1"></i></a>
+        </div>
+
+        <div class="mini-points">
+          <div class="mini-point">
+            <strong><span style="font-size:1.1rem;">🎯</span> Immersion</strong>
+            <span>Un environnement premium, pensé pour capter l'attention et l'émotion.</span>
+          </div>
+          <div class="mini-point">
+            <strong><span style="font-size:1.1rem;">🎛</span> Contrôle</strong>
+            <span>Chaque format donne au public une manière précise de vivre le son ou la vision.</span>
+          </div>
+          <div class="mini-point">
+            <strong><span style="font-size:1.1rem;">📡</span> Exploitation</strong>
+            <span>Chaque activation devient aussi un contenu média durable, éditorialisable et partageable.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════════════════
+       FORMATS PREVIEW
+  ════════════════════════════════════════════════════ -->
+  <section class="section" id="formats-home">
+    <div class="container">
+      <span class="section-eyebrow" data-reveal>Formats</span>
+      <h2 class="section-title" data-reveal data-reveal-delay="1">Trois formats.<br>Une seule signature.</h2>
+      <p class="section-subtitle" data-reveal data-reveal-delay="2">
+        Un système clair pour comprendre l'univers Kinoof Top et orienter immédiatement l'utilisateur vers ce qui lui parle.
+      </p>
+
+      <div class="grid-3" data-reveal data-reveal-delay="3">
+
+        <article class="card format-card kts card-glow-blue">
+          <div class="format-badge blue">KTS</div>
+          <div class="card-icon">🎧</div>
+          <h3 style="font-size:1.35rem;letter-spacing:-.03em;margin-bottom:10px;">Control the Sound</h3>
+          <p class="text-muted" style="font-size:.92rem;line-height:1.6;margin-bottom:20px;">
+            Une expérience immersive orientée audio, live session, silence maîtrisé, écoute premium et proximité émotionnelle.
+          </p>
+          <div style="margin-bottom:20px;">
+            <span class="tag">Immersion sonore</span>
+            <span class="tag">Silent experience</span>
+            <span class="tag">Live session</span>
+          </div>
+          <a href="events.html" class="btn btn-secondary btn-sm">Voir sessions →</a>
+        </article>
+
+        <article class="card format-card ktv card-glow-orange">
+          <div class="format-badge orange">KTV</div>
+          <div class="card-icon">🎥</div>
+          <h3 style="font-size:1.35rem;letter-spacing:-.03em;margin-bottom:10px;">Control the Vision</h3>
+          <p class="text-muted" style="font-size:.92rem;line-height:1.6;margin-bottom:20px;">
+            Un format centré sur l'image, la narration visuelle, la captation et la diffusion de contenu premium.
+          </p>
+          <div style="margin-bottom:20px;">
+            <span class="tag">Visual direction</span>
+            <span class="tag">Content first</span>
+            <span class="tag">Media experience</span>
+          </div>
+          <a href="media.html" class="btn btn-secondary btn-sm">Voir contenu →</a>
+        </article>
+
+        <article class="card format-card ktx">
+          <div class="format-badge gold">KTX</div>
+          <div class="card-icon">🔥</div>
+          <h3 style="font-size:1.35rem;letter-spacing:-.03em;margin-bottom:10px;">Full Experience</h3>
+          <p class="text-muted" style="font-size:.92rem;line-height:1.6;margin-bottom:20px;">
+            L'expression premium maximale : son, vision, audience, lifestyle, contenu et puissance de marque réunis.
+          </p>
+          <div style="margin-bottom:20px;">
+            <span class="tag">Premium</span>
+            <span class="tag">Hybrid format</span>
+            <span class="tag">Brand impact</span>
+          </div>
+          <a href="contact.html" class="btn btn-primary btn-sm">Découvrir →</a>
+        </article>
+
+      </div>
+
+      <div style="margin-top:32px; text-align:center;" data-reveal>
+        <a href="formats.html" class="btn btn-ghost btn-lg">Voir tous les formats en détail →</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════════════════
+       NEXT EVENT
+  ════════════════════════════════════════════════════ -->
+  <section class="section" id="next-event" style="background: radial-gradient(ellipse at 80% 40%, rgba(255,122,26,.07) 0%, transparent 45%);">
+    <div class="container">
+      <span class="section-eyebrow" data-reveal>
+        <span class="badge badge-live" style="background:none;border:none;padding:0;gap:8px;">
+          <span style="width:7px;height:7px;border-radius:50%;background:#ff6565;animation:blink 1.2s infinite;display:inline-block;"></span>
+        </span>
+        Next Event
+      </span>
+
+      <div class="event-card" data-reveal>
+        <div class="event-media">
+          <img
+            src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1400&q=80"
+            alt="Kinoof Top Sessions — Concert Live Rooftop Kinshasa"
+            loading="lazy"
+          />
+          <div class="event-media-overlay"></div>
+        </div>
+        <div class="event-content">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+            <span class="format-badge gold">KTX</span>
+            <span class="badge badge-live">LIVE</span>
+          </div>
+          <h3>Kinoof Top Sessions #01</h3>
+          <p class="text-muted" style="font-size:.95rem;line-height:1.65;margin-bottom:0;">
+            Une session rooftop pensée comme une expérience premium : ambiance urbaine, artiste live, écoute contrôlée,
+            esthétique forte et contenu capté pour diffusion.
+          </p>
+
+          <div class="event-meta" style="margin:22px 0 28px;">
+            <div class="event-meta-item">
+              <span class="event-meta-icon">📍</span>
+              Rooftop Kinshasa, RDC
+            </div>
+            <div class="event-meta-item">
+              <span class="event-meta-icon">📅</span>
+              30 Avril 2026 — 19h00
+            </div>
+            <div class="event-meta-item">
+              <span class="event-meta-icon">🎧</span>
+              Format KTS + captation KTV
+            </div>
+          </div>
+
+          <div style="display:flex;gap:12px;flex-wrap:wrap;">
+            <a href="events.html" class="btn btn-secondary">Voir détails</a>
+            <a href="events.html#reserve" class="btn btn-primary">
+              <i class="fa-solid fa-ticket"></i> Réserver
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════════════════
+       CONTENT PREVIEW
+  ════════════════════════════════════════════════════ -->
+  <section class="section" id="content-home">
+    <div class="container">
+      <span class="section-eyebrow" data-reveal>Content Preview</span>
+      <h2 class="section-title" data-reveal data-reveal-delay="1">Le contenu fait partie<br>de l'expérience.</h2>
+      <p class="section-subtitle" data-reveal data-reveal-delay="2">
+        Chaque moment vécu sur place peut devenir une matière visuelle forte, partageable et mémorable.
+      </p>
+
+      <div class="media-grid media-grid-3" data-reveal data-reveal-delay="3">
+
+        <article class="media-card">
+          <img
+            src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1200&q=80"
+            alt="Kinoof Top — Live Rooftop Session Kinshasa"
+            loading="lazy"
+          />
+          <div class="play-btn">▶</div>
+          <div class="media-overlay">
+            <strong>Live Rooftop Session</strong>
+            <span>Performance immersive · Kinshasa</span>
+          </div>
+        </article>
+
+        <article class="media-card">
+          <img
+            src="https://images.unsplash.com/photo-1499364615650-ec38552f4f34?auto=format&fit=crop&w=1200&q=80"
+            alt="Kinoof Top — Behind the Vibe"
+            loading="lazy"
+          />
+          <div class="play-btn">▶</div>
+          <div class="media-overlay">
+            <strong>Behind the Vibe</strong>
+            <span>Direction artistique · ambiance · public</span>
+          </div>
+        </article>
+
+        <article class="media-card">
+          <img
+            src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1200&q=80"
+            alt="Kinoof Top — Audience Experience"
+            loading="lazy"
+          />
+          <div class="play-btn">▶</div>
+          <div class="media-overlay">
+            <strong>Audience Experience</strong>
+            <span>Immersion collective · émotion · lifestyle</span>
+          </div>
+        </article>
+
+      </div>
+
+      <div style="margin-top:32px; text-align:center;" data-reveal>
+        <a href="media.html" class="btn btn-primary btn-lg">
+          <i class="fa-solid fa-film"></i> Voir tout le contenu
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════════════════
+       PARTNERS
+  ════════════════════════════════════════════════════ -->
+  <section class="section" id="partners-home">
+    <div class="container">
+      <span class="section-eyebrow" data-reveal>Partners</span>
+      <h2 class="section-title" data-reveal data-reveal-delay="1">Construire l'expérience ensemble.</h2>
+      <p class="section-subtitle" data-reveal data-reveal-delay="2">
+        Marques, technologie, lifestyle, médias, énergie, institutions : un écosystème aligné sur l'innovation.
+      </p>
+
+      <div class="partners-grid" data-reveal data-reveal-delay="3">
+        <div class="partner-item">PARTNER 01</div>
+        <div class="partner-item">PARTNER 02</div>
+        <div class="partner-item">PARTNER 03</div>
+        <div class="partner-item">PARTNER 04</div>
+        <div class="partner-item">PARTNER 05</div>
+      </div>
+
+      <div style="margin-top:32px; display:flex; gap:14px; flex-wrap:wrap;" data-reveal>
+        <a href="partnerships.html" class="btn btn-primary">Devenir partenaire →</a>
+        <a href="assets/kinoof-top-deck.pdf" data-deck-download class="btn btn-secondary">
+          <i class="fa-solid fa-download"></i> Télécharger le Deck
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════════════════
+       CTA BANDE
+  ════════════════════════════════════════════════════ -->
+  <section class="section" style="padding:56px 0;">
+    <div class="container">
+      <div style="
+        background: linear-gradient(135deg, rgba(58,160,255,.1) 0%, rgba(255,122,26,.1) 100%);
+        border: 1px solid rgba(255,255,255,.1);
+        border-radius: 28px;
+        padding: 52px 48px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+        flex-wrap: wrap;
+        position: relative;
+        overflow: hidden;
+      " data-reveal>
+        <div class="glow-sphere glow-blue" style="width:300px;height:300px;top:-100px;left:-80px;opacity:.2;"></div>
+        <div>
+          <h2 style="font-size:clamp(1.8rem,3.5vw,3rem);font-weight:900;letter-spacing:-.05em;margin-bottom:10px;">
+            Let's build something<br><span class="gradient-text">together.</span>
+          </h2>
+          <p style="color:var(--muted);font-size:1rem;max-width:480px;">
+            Event, partenariat, contenu ou collaboration — contactez-nous directement.
+          </p>
+        </div>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn-primary btn-xl">
+            <i class="fa-solid fa-envelope"></i> Nous contacter
+          </a>
+          <a href="https://wa.me/243815334097" target="_blank" rel="noopener" class="btn btn-whatsapp btn-xl">
+            <i class="fab fa-whatsapp"></i> +243 815 334 097
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <span class="brand-mark">K</span>
+            <div class="brand-text">
+              Kinoof Top
+              <span>Control the sound.</span>
+            </div>
+          </a>
+          <p>
+            Plateforme d'expériences live et digitales premium. Musique, image et culture à Kinshasa et au-delà.
+          </p>
+          <div class="socials">
+            <a href="https://www.instagram.com/kinooftop" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/kinooftop" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.youtube.com/@kinooftop" target="_blank" rel="noopener" class="social-link" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.tiktok.com/@kinooftop" target="_blank" rel="noopener" class="social-link" aria-label="TikTok">
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">Kinoof Top</a></li>
+            <li><a href="formats.html">Formats</a></li>
+            <li><a href="media.html">Content</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Expérience</h4>
+          <ul>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="partnerships.html">Partnerships</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="assets/kinoof-top-deck.pdf" data-deck-download>Deck Présentation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact direct</h4>
+          <ul>
+            <li><a href="mailto:hello@kinooftop.com">hello@kinooftop.com</a></li>
+            <li><a href="https://wa.me/243815334097" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> +243 815 334 097</a></li>
+            <li>Kinshasa, RDC</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Kinoof Top. All rights reserved. — <em>Not an event. A platform.</em></p>
+        <p style="color:var(--muted);font-size:.78rem;">Designed with precision.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══ SCRIPTS ═══ -->
+  <script src="js/main.js"></script>
+</body>
+</html>
