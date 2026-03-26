@@ -95,6 +95,19 @@ button { font-family: inherit; }
   opacity: 1;
 }
 
+/* ---- ANIMATIONS / EFFECTS ---- */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+[data-reveal].active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ---- LAYOUT ---- */
 .container {
   width: min(var(--max), calc(100% - 32px));
