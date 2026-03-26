@@ -412,7 +412,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 //  PAGE TRANSITION 
-document.addEventListener("DOMContentLoaded", () => {
   const transition = document.querySelector(".page-transition");
 
   const links = document.querySelectorAll("a[href]");
