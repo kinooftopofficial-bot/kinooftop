@@ -1630,3 +1630,7 @@ blockquote::before {
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { width: 100%; justify-content: center; }
 }
+
+* {
+  outline: 1px solid red;
+}
