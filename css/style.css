@@ -80,6 +80,21 @@ img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 button { font-family: inherit; }
 
+/* ---- PAGE TRANSITION ---- */
+.page-transition {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle, #0a0a0a, #000000);
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+
+.page-transition.active {
+  opacity: 1;
+}
+
 /* ---- LAYOUT ---- */
 .container {
   width: min(var(--max), calc(100% - 32px));
