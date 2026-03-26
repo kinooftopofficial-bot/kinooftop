@@ -612,10 +612,6 @@ body::after {
   font-weight: 900;
   letter-spacing: -.06em;
   margin-bottom: 24px;
-
-  /* ✅ FIX */
-  display: inline-block;
-  padding-right: 0.12em;
 }
 
 .hero-desc {
