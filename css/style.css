@@ -13,6 +13,12 @@
   --muted: #8494ab;
   --line: rgba(255,255,255,.07);
   --line-strong: rgba(255,255,255,.12);
+  --space-xs: 6px;
+  --space-sm: 12px;
+  --space-md: 20px;
+  --space-lg: 32px;
+  --space-xl: 56px;
+  --space-2xl: 80px;
 
 /* Brand colours (NEW — aligned with logo) */
 --gold: #FFB800;
@@ -176,10 +182,9 @@ body::after {
   background-position: left center;
 }
 
-@keyframes gradientMove {
-  to {
-    background-position: 200% center;
-  }
+@keyframes gradientShift {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
 }
 
 /* ============================================================
@@ -193,6 +198,9 @@ body::after {
   z-index: 500;
   transition: background var(--dur) var(--ease), border-color var(--dur) var(--ease);
   border-bottom: 1px solid transparent;
+  backdrop-filter: blur(14px);
+  background: rgba(0,0,0,0.4);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
 .nav.scrolled {
@@ -370,7 +378,10 @@ body::after {
   white-space: nowrap;
 }
 
-.btn:hover { transform: translateY(-2px); }
+.btn:hover { 
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(168, 85, 247, 0.35); 
+}
 
 .btn-primary {
   background: var(--gradient);
@@ -588,7 +599,7 @@ body::after {
 .hero-grain {
   position: absolute;
   inset: 0;
-  opacity: .08;
+  opacity: .10;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
 }
 
@@ -596,6 +607,7 @@ body::after {
   position: relative;
   z-index: 2;
   max-width: 900px;
+  gap: var(--space-lg);
 }
 
 .hero-tag {
@@ -637,14 +649,15 @@ body::after {
   color: var(--text-dim);
   max-width: 680px;
   line-height: 1.7;
-  margin-bottom: 36px;
+  margin-bottom: var(--space-lg);
+   
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
-  margin-bottom: 56px;
+  margin-bottom: var(--space-xl);
 }
 
 /* Hero Stats */
@@ -661,12 +674,12 @@ body::after {
   border-radius: 18px;
   padding: 20px;
   backdrop-filter: blur(14px);
-  transition: border-color var(--dur), transform var(--dur);
+  transition: all 0.3s ease;
 }
 
 .hero-stat:hover {
   border-color: rgba(58,160,255,.3);
-  transform: translateY(-3px);
+  transform: translateY(-6px) scale(1.02);
 }
 
 .hero-stat h3 {
