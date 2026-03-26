@@ -163,6 +163,10 @@ body::after {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+
+  /* ✅ ADD THIS */
+  display: inline-block;
+  padding-right: 0.12em;
 }
 
 /* ============================================================
