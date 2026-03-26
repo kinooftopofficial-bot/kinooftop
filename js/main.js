@@ -440,7 +440,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Faster + smoother
       setTimeout(() => {
         window.location.href = url;
-      }, 350);
+      }, 250);
     });
   });
 });
