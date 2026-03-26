@@ -537,7 +537,7 @@ body::after {
   display: flex;
   align-items: center;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   padding-top: 82px;
 }
 
