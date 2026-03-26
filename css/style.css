@@ -14,13 +14,21 @@
   --line: rgba(255,255,255,.07);
   --line-strong: rgba(255,255,255,.12);
 
-  /* Brand colours */
-  --blue: #3aa0ff;
-  --blue-glow: rgba(58,160,255,.22);
-  --orange: #ff7a1a;
-  --orange-glow: rgba(255,122,26,.18);
-  --gradient: linear-gradient(130deg, #3aa0ff 0%, #ff7a1a 100%);
-  --gradient-rev: linear-gradient(130deg, #ff7a1a 0%, #3aa0ff 100%);
+/* Brand colours (NEW — aligned with logo) */
+--gold: #FFB800;
+--gold-glow: rgba(255, 184, 0, 0.35);
+
+--purple: #A855F7;
+--purple-glow: rgba(168, 85, 247, 0.35);
+
+--cyan: #22D3EE;
+--cyan-glow: rgba(34, 211, 238, 0.35);
+
+/* Main gradient (logo style) */
+--gradient: linear-gradient(90deg, #FFB800 0%, #A855F7 50%, #22D3EE 100%);
+
+/* Reverse gradient */
+--gradient-rev: linear-gradient(90deg, #22D3EE 0%, #A855F7 50%, #FFB800 100%);
 
   /* Spacing & shape */
   --radius: 20px;
