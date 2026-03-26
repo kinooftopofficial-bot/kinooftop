@@ -402,13 +402,13 @@ body::after {
   font-weight: 700;
   cursor: pointer;
   border: 1px solid transparent;
-  transition: transform var(--dur) var(--ease), filter var(--dur), box-shadow var(--dur);
+  transition: all 0.25s ease;
   white-space: nowrap;
 }
 
 .btn:hover { 
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(168, 85, 247, 0.35); 
+  box-shadow: 0 12px 30px rgba(168, 85, 247, 0.35); 
 }
 
 .btn-primary {
