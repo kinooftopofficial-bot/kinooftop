@@ -210,8 +210,12 @@ body::after {
   width: 42px;
   height: 42px;
   object-fit: contain;
-  display: block;
 
+  /* ✨ subtle glow */
+  filter: drop-shadow(0 0 6px rgba(255, 184, 0, 0.35))
+          drop-shadow(0 0 10px rgba(168, 85, 247, 0.25))
+          drop-shadow(0 0 14px rgba(34, 211, 238, 0.2));
+   
   /* ❌ remove old styling */
   background: none;
   border-radius: 0;
@@ -220,6 +224,13 @@ body::after {
 
   /* optional */
   flex-shrink: 0;
+}
+
+.brand-mark:hover {
+  filter: drop-shadow(0 0 10px rgba(255, 184, 0, 0.5))
+          drop-shadow(0 0 18px rgba(168, 85, 247, 0.4))
+          drop-shadow(0 0 24px rgba(34, 211, 238, 0.35));
+  transition: 0.3s ease;
 }
 
 .brand-text {
