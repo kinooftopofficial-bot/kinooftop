@@ -407,6 +407,40 @@ document.addEventListener('DOMContentLoaded', () => {
   initCardGlow();
   initCounters();
 
-  // Countdown: 30 April 2026 19:00 (Kinshasa time = UTC+1)
-  initCountdown('2026-04-30T19:00:00+01:00');
+  // Countdown: 01 may 2026 16:00 (Kinshasa time = UTC+1)
+  initCountdown('2026-05-01T16:00:00+01:00');
+});
+
+//  PAGE TRANSITION 
+document.addEventListener("DOMContentLoaded", () => {
+  const transition = document.querySelector(".page-transition");
+
+  const links = document.querySelectorAll("a[href]");
+
+  links.forEach(link => {
+    link.addEventListener("click", e => {
+      const url = link.getAttribute("href");
+
+      if (
+        url.startsWith("#") ||
+        url.startsWith("mailto:") ||
+        url.startsWith("tel:") ||
+        link.target === "_blank"
+      ) return;
+
+      e.preventDefault();
+
+      transition.classList.add("active");
+
+      setTimeout(() => {
+        window.location.href = url;
+      }, 400);
+    });
+  });
+});
+
+
+window.addEventListener("pageshow", () => {
+  const transition = document.querySelector(".page-transition");
+  if (transition) transition.classList.remove("active");
 });
