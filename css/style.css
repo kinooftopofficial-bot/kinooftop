@@ -73,6 +73,7 @@ body {
   color: var(--text);
   line-height: 1.65;
   cursor: default;
+  max-width: 100%;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
@@ -111,7 +112,9 @@ button { font-family: inherit; }
 
 /* ---- LAYOUT ---- */
 .container {
-  width: min(var(--max), calc(100% - 32px));
+  width: 100%;
+  max-width: var(--max);
+  padding-inline: 16px;
   margin-inline: auto;
 }
 
@@ -245,6 +248,7 @@ body::after {
   justify-content: space-between;
   gap: 20px;
   min-height: 82px;
+  flex-wrap: wrap;
 }
 
 /* Brand */
@@ -595,7 +599,7 @@ body::after {
   display: flex;
   align-items: center;
   position: relative;
-  overflow: visible;
+  overflow: hidden;
   padding-top: 82px;
 }
 
@@ -667,6 +671,7 @@ body::after {
 
 .hero h1 {
   font-size: clamp(3.4rem, 8vw, 7.5rem);
+  word-break: break-word;
   line-height: .92;
   font-weight: 900;
   letter-spacing: -.06em;
