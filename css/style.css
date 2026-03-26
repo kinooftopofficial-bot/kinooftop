@@ -170,7 +170,7 @@ body::after {
   background-clip: text;
   color: transparent;
   background-size: 200% auto;
-  animation: gradientMove 6s linear infinite;
+  animation: gradientShift 6s linear infinite;
 
   /* ✅ ADD THIS */
   display: inline-block;
