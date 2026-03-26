@@ -201,15 +201,16 @@ body::after {
 .brand-mark {
   width: 42px;
   height: 42px;
-  border-radius: 13px;
-  display: grid;
-  place-items: center;
-  background: var(--gradient);
-  color: white;
-  font-weight: 900;
-  font-size: 1.2rem;
-  letter-spacing: -.03em;
-  box-shadow: 0 10px 30px var(--blue-glow);
+  object-fit: contain;
+  display: block;
+
+  /* ❌ remove old styling */
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+
+  /* optional */
   flex-shrink: 0;
 }
 
