@@ -412,7 +412,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 //  PAGE TRANSITION 
+document.addEventListener("DOMContentLoaded", () => {
   const transition = document.querySelector(".page-transition");
+
+  if (!transition) return; // safety
 
   const links = document.querySelectorAll("a[href]");
 
@@ -420,7 +423,9 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener("click", e => {
       const url = link.getAttribute("href");
 
+      // Ignore special links
       if (
+        !url ||
         url.startsWith("#") ||
         url.startsWith("mailto:") ||
         url.startsWith("tel:") ||
@@ -429,17 +434,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
       e.preventDefault();
 
+      // Activate transition
       transition.classList.add("active");
 
+      // Faster + smoother
       setTimeout(() => {
         window.location.href = url;
-      }, 400);
+      }, 250);
     });
   });
 });
 
 
-window.addEventListener("pageshow", () => {
+// 🔥 CRITICAL FIX (this was missing)
+window.addEventListener("load", () => {
   const transition = document.querySelector(".page-transition");
-  if (transition) transition.classList.remove("active");
+
+  if (transition) {
+    transition.classList.remove("active");
+    transition.style.opacity = "0";
+  }
 });
