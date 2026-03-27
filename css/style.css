@@ -134,6 +134,13 @@ button { font-family: inherit; }
   min-width: 0;
 }
 
+.responsive-2col {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+  align-items: start;
+}
+
 /* ---- NOISE TEXTURE OVERLAY ---- */
 body::before {
   content: "";
@@ -1722,6 +1729,10 @@ blockquote::before {
     grid-template-columns: 1fr 1fr;
     gap: 16px;
   }
+
+   .responsive-2col {
+  grid-template-columns: 1fr;
+}
 }
 
 @media (max-width: 560px) {
