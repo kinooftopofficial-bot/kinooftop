@@ -134,6 +134,11 @@ button { font-family: inherit; }
   min-width: 0;
 }
 
+.countdown div,
+.stat-box {
+  min-width: 0;
+}
+
 .responsive-2col {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -1736,14 +1741,20 @@ blockquote::before {
     gap: 16px;
   }
 
+   /* STACK MAIN LAYOUT */
   .responsive-2col {
     grid-template-columns: 1fr;
-  } 
+  }
 
   .responsive-2col-2 {
     grid-template-columns: 1fr;
   }
-}
+
+   /* BETTER MOBILE GRID */
+  .pillars-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
 
 @media (max-width: 560px) {
   .section { padding: 56px 0; }
@@ -1754,7 +1765,7 @@ blockquote::before {
   .partners-grid {
     grid-template-columns: 1fr;
   }
-
+}
   .pack-grid { grid-template-columns: 1fr; }
 
   /* ✅ COUNTDOWN FIX */
