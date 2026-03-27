@@ -793,6 +793,7 @@ body::after {
   box-shadow: var(--shadow);
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 
 .highlight-panel::before {
@@ -1673,6 +1674,7 @@ blockquote::before {
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
   .event-card { grid-template-columns: 1fr; }
   .concept-grid { grid-template-columns: 1fr; }
+  .concept-grid > * { min-width: 0; }
 }
 
 @media (max-width: 860px) {
@@ -1687,6 +1689,7 @@ blockquote::before {
   .countdown { grid-template-columns: repeat(4, 1fr); gap: 8px; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
   .pack.featured { transform: none; }
+  .concept-grid > * { min-width: 0; }
 }
 
 @media (max-width: 560px) {
