@@ -141,6 +141,12 @@ button { font-family: inherit; }
   align-items: start;
 }
 
+.responsive-2col-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
 /* ---- NOISE TEXTURE OVERLAY ---- */
 body::before {
   content: "";
@@ -1730,9 +1736,13 @@ blockquote::before {
     gap: 16px;
   }
 
-   .responsive-2col {
-  grid-template-columns: 1fr;
-}
+  .responsive-2col {
+    grid-template-columns: 1fr;
+  } 
+
+  .responsive-2col-2 {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 560px) {
