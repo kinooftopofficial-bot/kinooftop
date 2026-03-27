@@ -1703,18 +1703,19 @@ blockquote::before {
 
   .section { padding: 72px 0; }
 
-  .grid-3, .media-grid-3 { grid-template-columns: repeat(2, 1fr); }
-  .grid-2, .media-grid-2 { grid-template-columns: 1fr; }
+  /* ✅ MOBILE STACK FIX */
+  .grid-2,
+  .grid-3,
+  .media-grid-2,
+  .media-grid-3,
+  .concept-grid,
+  .event-card {
+    grid-template-columns: 1fr;
+  }
 
   .pillars-grid { grid-template-columns: 1fr; }
   .hero-stats { grid-template-columns: 1fr; }
-
   .footer-grid { grid-template-columns: 1fr; }
-
-  .event-card,
-  .concept-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 560px) {
