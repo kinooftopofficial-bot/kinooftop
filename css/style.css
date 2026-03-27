@@ -1690,6 +1690,27 @@ blockquote::before {
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
   .pack.featured { transform: none; }
   .concept-grid > * { min-width: 0; }
+
+   /* FORCE ALL SPLIT LAYOUTS TO STACK */
+  .highlight,
+  .event-card,
+  .contact-grid,
+  .two-col,
+  .split,
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr !important;
+  }
+
+   /* FIX SIDE PANELS */
+  .highlight-panel,
+  .contact-form,
+  .event-info,
+  .event-visual {
+    width: 100%;
+  }
+
+}
 }
 
 @media (max-width: 560px) {
@@ -1701,4 +1722,13 @@ blockquote::before {
   .hero h1 { letter-spacing: -.05em; }
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { width: 100%; justify-content: center; }
+}
+
+/* 🔥 EMERGENCY MOBILE FIX */
+html, body {
+  overflow-x: hidden;
+}
+
+* {
+  max-width: 100%;
 }
