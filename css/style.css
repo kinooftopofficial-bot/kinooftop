@@ -137,6 +137,7 @@ button { font-family: inherit; }
 .countdown div,
 .stat-box {
   min-width: 0;
+  overflow: hidden;
 }
 
 .responsive-2col {
@@ -1755,7 +1756,7 @@ blockquote::before {
     grid-template-columns: 1fr 1fr;
     gap: 16px;
   }
-
+}
 @media (max-width: 560px) {
   .section { padding: 56px 0; }
 
