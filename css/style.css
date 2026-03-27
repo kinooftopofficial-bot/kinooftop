@@ -1709,8 +1709,6 @@ blockquote::before {
   .event-visual {
     width: 100%;
   }
-
-}
 }
 
 @media (max-width: 560px) {
