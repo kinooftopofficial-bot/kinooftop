@@ -131,10 +131,7 @@ function initCountdown(targetDateStr) {
 
   tick();
   setInterval(tick, 1000);
-  initCountdown("2026-04-30T19:00:00");
 }
-
-
 
 // ============================================================
 // TOAST NOTIFICATION
