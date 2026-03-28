@@ -252,18 +252,18 @@ function initReservationForm() {
   });
 }
 
-// RESERVATION FORM → WHATSAPP
+// RESERVATION FORM → WHATSAPP (SAFE)
 const form = document.getElementById("reservationForm");
 
 if (form) {
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const name = document.getElementById("r-nom").value;
-    const phone = document.getElementById("r-tel").value;
-    const email = document.getElementById("r-email").value;
-    const places = document.getElementById("r-places").value;
-    const note = document.getElementById("r-note").value;
+    const name = document.getElementById("r-nom")?.value || "";
+    const phone = document.getElementById("r-tel")?.value || "";
+    const email = document.getElementById("r-email")?.value || "";
+    const places = document.getElementById("r-places")?.value || "";
+    const note = document.getElementById("r-note")?.value || "";
 
     const message = `Bonjour, je souhaite réserver pour Kinoof Top Sessions #01.%0A
 Nom: ${name}%0A
