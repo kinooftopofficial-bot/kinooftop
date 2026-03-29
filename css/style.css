@@ -1798,6 +1798,20 @@ blockquote::before {
   }
 }
 
+/* ===== EVENT RESPONSIVE GRID ===== */
+.event-grid {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: 1fr;
+}
+
+/* Desktop only → 2 columns */
+@media (min-width: 768px) {
+  .event-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 /* SAFE FIX */
 html, body {
   overflow-x: hidden;
