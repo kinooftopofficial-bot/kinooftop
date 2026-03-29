@@ -249,32 +249,6 @@ function initReservationForm() {
   });
 }
 
-// RESERVATION FORM → WHATSAPP (SAFE)
-const form = document.getElementById("reservationForm");
-
-if (form) {
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const name = document.getElementById("r-nom")?.value || "";
-    const phone = document.getElementById("r-tel")?.value || "";
-    const email = document.getElementById("r-email")?.value || "";
-    const places = document.getElementById("r-places")?.value || "";
-    const note = document.getElementById("r-note")?.value || "";
-
-    const message = `Bonjour, je souhaite réserver pour Kinoof Top Sessions #01.%0A
-Nom: ${name}%0A
-Téléphone: ${phone}%0A
-Email: ${email}%0A
-Places: ${places}%0A
-Note: ${note}`;
-
-    const whatsappURL = `https://wa.me/243815334097?text=${message}`;
-
-    window.open(whatsappURL, "_blank");
-  });
-}
-
 // ============================================================
 // FORM — PARTNERSHIP (POST to /tables/contacts)
 // ============================================================
