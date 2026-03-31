@@ -1812,6 +1812,45 @@ blockquote::before {
   }
 }
 
+/* ===== MEDIA FEATURED RESPONSIVE ===== */
+.media-featured-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr; /* mobile = stack */
+}
+
+/* right column (small cards) */
+.media-side-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr; /* mobile = 2 small side by side */
+}
+
+/* desktop layout */
+@media (min-width: 768px) {
+  .media-featured-grid {
+    grid-template-columns: 1.6fr 1fr;
+  }
+
+  .media-side-grid {
+    grid-template-columns: 1fr; /* stack vertically on desktop */
+  }
+}
+
+/* ===== GALLERY RESPONSIVE ===== */
+.gallery-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, 1fr); /* 📱 mobile = 2 columns */
+}
+
+/* desktop layout */
+@media (min-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 /* SAFE FIX */
 html, body {
   overflow-x: hidden;
