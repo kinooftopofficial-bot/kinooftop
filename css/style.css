@@ -1883,6 +1883,18 @@ blockquote::before {
   }
 }
 
+.partner-grid {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .partner-grid {
+    grid-template-columns: .9fr 1.1fr;
+  }
+}
+
 /* SAFE FIX */
 html, body {
   overflow-x: hidden;
