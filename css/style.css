@@ -1851,6 +1851,17 @@ blockquote::before {
   }
 }
 
+/* ===== GALLERY FIX ===== */
+.gallery-big {
+  grid-row: span 1;
+}
+
+@media (min-width: 768px) {
+  .gallery-big {
+    grid-row: span 2;
+  }
+}
+
 /* SAFE FIX */
 html, body {
   overflow-x: hidden;
