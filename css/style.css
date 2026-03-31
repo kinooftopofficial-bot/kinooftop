@@ -1911,6 +1911,18 @@ blockquote::before {
   }
 }
 
+/* ===== RENDERING FIX ===== */
+/* Better rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Smoother transitions everywhere */
+* {
+  transition: all 0.25s ease;
+}
+
 /* SAFE FIX */
 html, body {
   overflow-x: hidden;
