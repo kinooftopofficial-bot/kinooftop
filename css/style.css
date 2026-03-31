@@ -1375,6 +1375,7 @@ body::after {
 .contact-item:hover {
   border-color: rgba(58,160,255,.25);
   transform: translateX(4px);
+  transition: 0.3s;
 }
 
 .contact-item small {
@@ -1883,6 +1884,7 @@ blockquote::before {
   }
 }
 
+/* ===== PARTNER GRID FIX ===== */
 .partner-grid {
   display: grid;
   gap: 28px;
@@ -1892,6 +1894,20 @@ blockquote::before {
 @media (min-width: 768px) {
   .partner-grid {
     grid-template-columns: .9fr 1.1fr;
+  }
+}
+
+/* ===== CONTACT GRID FIX ===== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .contact-grid {
+    grid-template-columns: .85fr 1.15fr;
   }
 }
 
