@@ -1862,6 +1862,27 @@ blockquote::before {
   }
 }
 
+/* ===== PACK GRID FIX (MOBILE FIRST) ===== */
+.pack-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .pack-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1100px) {
+  .pack-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 /* SAFE FIX */
 html, body {
   overflow-x: hidden;
