@@ -491,3 +491,26 @@ window.addEventListener("load", () => {
     });
   });
 });
+
+let lastScroll = 0;
+const nav = document.getElementById("nav");
+
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+
+  // Add scrolled class (your shrink trigger)
+  if (currentScroll > 50) {
+    nav.classList.add("scrolled");
+  } else {
+    nav.classList.remove("scrolled");
+  }
+
+  // Hide on scroll down
+  if (currentScroll > lastScroll && currentScroll > 120) {
+    nav.style.transform = "translateY(-100%)";
+  } else {
+    nav.style.transform = "translateY(0)";
+  }
+
+  lastScroll = currentScroll;
+});
