@@ -1914,7 +1914,12 @@ blockquote::before {
 @media (max-width: 860px) {
 
   .nav-links, .nav-cta .btn-secondary { display: none; }
-  .menu-btn { display: grid; }
+  .menu-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
 
   /* 👇 ADD YOUR FIX RIGHT HERE */
 
@@ -1930,16 +1935,18 @@ blockquote::before {
 
   /* WhatsApp icon only */
   .btn-whatsapp {
-    padding: 10px;
     width: 42px;
     height: 42px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
     justify-content: center;
-  }
+   }
 
   .btn-whatsapp span {
     display: none;
   }
-}
 
   /* ✅ MOBILE STACK FIX */
   .grid-2,
@@ -1985,7 +1992,7 @@ blockquote::before {
     gap: 16px;
   }
 }
-@media (max-width: 560px) {
+@media (max-width: 560px) { 
   .section { padding: 56px 0; }
   .responsive-2col-2 {
     grid-template-columns: 1fr;
@@ -1997,8 +2004,8 @@ blockquote::before {
   .partners-grid {
     grid-template-columns: 1fr;
   }
-}
   .pack-grid { grid-template-columns: 1fr; }
+}
 
   /* ✅ COUNTDOWN FIX */
   .countdown {
