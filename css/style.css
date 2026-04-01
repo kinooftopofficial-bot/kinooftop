@@ -1912,10 +1912,34 @@ blockquote::before {
 }
 
 @media (max-width: 860px) {
+
   .nav-links, .nav-cta .btn-secondary { display: none; }
   .menu-btn { display: grid; }
 
-  .section { padding: 72px 0; }
+  /* 👇 ADD YOUR FIX RIGHT HERE */
+
+  /* Hide tagline */
+  .brand-text span {
+    display: none;
+  }
+
+  /* Smaller brand text */
+  .brand-text {
+    font-size: 1rem;
+  }
+
+  /* WhatsApp icon only */
+  .btn-whatsapp {
+    padding: 10px;
+    width: 42px;
+    height: 42px;
+    justify-content: center;
+  }
+
+  .btn-whatsapp span {
+    display: none;
+  }
+}
 
   /* ✅ MOBILE STACK FIX */
   .grid-2,
