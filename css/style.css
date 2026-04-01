@@ -258,7 +258,7 @@ body::after {
   left: 0;
   width: 100%;
   z-index: 500;
-  transition: background var(--dur) var(--ease), border-color var(--dur) var(--ease);
+  transition: transform 0.35s ease, background var(--dur) var(--ease), border-color var(--dur) var(--ease);
   border-bottom: 1px solid transparent;
   backdrop-filter: blur(14px);
   background: rgba(0,0,0,0.4);
