@@ -263,6 +263,7 @@ body::after {
   backdrop-filter: blur(14px);
   background: rgba(0,0,0,0.4);
   border-bottom: 1px solid rgba(255,255,255,0.06);
+  will-change: transform, background;
 }
 
 .nav.scrolled {
@@ -294,7 +295,7 @@ body::after {
   gap: 20px;
   min-height: 82px;
   flex-wrap: wrap;
-  transition: all 0.3s ease;
+  transition: min-height 0.3s ease, padding 0.3s ease;
 }
 
 /* Brand */
@@ -314,6 +315,7 @@ body::after {
   width: 42px;
   height: 42px;
   object-fit: contain;
+  transition: all 0.3s ease;
 
   /* ✨ subtle glow */
   filter: drop-shadow(0 0 4px rgba(255, 184, 0, 0.35))
@@ -403,7 +405,7 @@ body::after {
 .nav-mobile {
   display: none;
   position: fixed;
-  top: 82px;
+  top: 72px;
   left: 12px;
   right: 12px;
   background: rgba(9,12,18,.97);
@@ -415,6 +417,7 @@ body::after {
   z-index: 499;
   flex-direction: column;
   gap: 6px;
+  transition: top 0.3s ease;
 }
 
 .nav-mobile.open { display: flex; }
