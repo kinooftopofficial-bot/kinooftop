@@ -1207,7 +1207,7 @@ body::after {
 
 .time-box .label {
   display: block;
-  font-size: .75rem;
+  font-size: clamp(0.65rem, 2.5vw, 0.75rem);
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
