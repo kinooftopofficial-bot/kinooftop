@@ -1193,6 +1193,7 @@ body::after {
   background: rgba(255,255,255,.03);
   border: 1px solid var(--line);
   overflow: visible;
+  min-width: 0;
 }
 
 .time-box .number {
@@ -1207,6 +1208,9 @@ body::after {
   background-clip: text;
   color: transparent;
   margin-bottom: 8px;
+  min-width: 0;
+  width: 100%;
+  text-align: center;
 }
 
 .time-box .label {
