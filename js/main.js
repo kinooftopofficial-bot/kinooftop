@@ -25,43 +25,53 @@
   const nav = document.querySelector('.nav');
   const menuBtn = document.getElementById('menuBtn');
   const navMobile = document.getElementById('navMobile');
+  const overlay = document.querySelector('.menu-overlay'); // ✅ ADDED
 
-if (nav) {
-  let lastScroll = 0;
+  if (nav) {
+    let lastScroll = 0;
 
-  const onScroll = () => {
-    const currentScroll = window.scrollY;
+    const onScroll = () => {
+      const currentScroll = window.scrollY;
 
-    // Shrink effect
-    nav.classList.toggle('scrolled', currentScroll > 50);
+      nav.classList.toggle('scrolled', currentScroll > 50);
 
-    // Hide / show
-    if (currentScroll > lastScroll && currentScroll > 120) {
-      nav.style.transform = "translateY(-100%)";
-    } else {
-      nav.style.transform = "translateY(0)";
-    }
+      if (currentScroll > lastScroll && currentScroll > 120) {
+        nav.style.transform = "translateY(-100%)";
+      } else {
+        nav.style.transform = "translateY(0)";
+      }
 
-    lastScroll = currentScroll;
-  };
+      lastScroll = currentScroll;
+    };
 
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-}
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
 
-  if (menuBtn && navMobile) {
+  if (menuBtn && navMobile && overlay) {
     menuBtn.addEventListener('click', () => {
-      navMobile.classList.toggle('open');
+      navMobile.classList.toggle("open");
+      overlay.classList.toggle("active");
       menuBtn.textContent = navMobile.classList.contains('open') ? '✕' : '☰';
     });
 
     navMobile.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
         navMobile.classList.remove('open');
+        overlay.classList.remove('active'); // ✅ ALSO CLOSE OVERLAY
         menuBtn.textContent = '☰';
       });
     });
+
+    // ✅ CLICK OUTSIDE CLOSE
+    overlay.addEventListener('click', () => {
+      navMobile.classList.remove('open');
+      overlay.classList.remove('active');
+      menuBtn.textContent = '☰';
+    });
   }
+
+})();
 
   // Highlight active nav link
   const links = document.querySelectorAll('.nav-links a, .nav-mobile a');
