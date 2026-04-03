@@ -25,7 +25,7 @@
   const nav = document.querySelector('.nav');
   const menuBtn = document.getElementById('menuBtn');
   const navMobile = document.getElementById('navMobile');
-  const overlay = document.querySelector('.menu-overlay'); // ✅ ADDED
+  const overlay = document.getElementById('menuOverlay');
 
   if (nav) {
     let lastScroll = 0;
