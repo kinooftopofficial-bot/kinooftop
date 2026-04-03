@@ -480,23 +480,6 @@ window.addEventListener("load", () => {
   }
 });
 
-// ✨ SCROLL REVEAL (FIXED)
-window.addEventListener("load", () => {
-  const reveals = document.querySelectorAll("[data-reveal]");
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("active");
-      }
-    });
-  }, {
-    threshold: 0.1
-  });
-
-  reveals.forEach(el => observer.observe(el));
-});
-
 // 🧲 MAGNETIC BUTTONS (FIXED)
 window.addEventListener("load", () => {
   const buttons = document.querySelectorAll(".btn");
