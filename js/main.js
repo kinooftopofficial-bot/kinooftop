@@ -58,12 +58,11 @@
     navMobile.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
         navMobile.classList.remove('open');
-        overlay.classList.remove('active'); // ✅ ALSO CLOSE OVERLAY
+        overlay.classList.remove('active');
         menuBtn.textContent = '☰';
       });
     });
 
-    // ✅ CLICK OUTSIDE CLOSE
     overlay.addEventListener('click', () => {
       navMobile.classList.remove('open');
       overlay.classList.remove('active');
@@ -71,17 +70,17 @@
     });
   }
 
-})();
-
-  // Highlight active nav link
+  // ✅ ACTIVE LINK FIX (moved inside)
   const links = document.querySelectorAll('.nav-links a, .nav-mobile a');
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
   links.forEach(link => {
     const href = link.getAttribute('href');
     if (href === currentPage || (currentPage === '' && href === 'index.html')) {
       link.classList.add('active');
     }
   });
+
 })();
 
 // ============================================================
