@@ -1755,21 +1755,34 @@ blockquote::before {
     font-size: 1rem;
   }
 
-  /* WhatsApp icon only */
-  .btn-whatsapp {
+  /* 📱 MOBILE ONLY: clean WhatsApp icon button */
+@media (max-width: 768px) {
+
+  .nav-cta .btn-whatsapp {
     width: 42px;
     height: 42px;
     padding: 0;
-    border-radius: 50%;
+    border-radius: 12px; /* 👈 NOT circle = matches your UI */
+    
     display: flex;
     align-items: center;
     justify-content: center;
-   }
 
-  .btn-whatsapp span {
+    /* 🔥 IMPORTANT: prevent stretching */
+    flex: 0 0 auto;
+  }
+
+  /* hide ONLY text */
+  .nav-cta .btn-whatsapp span {
     display: none;
   }
 
+  /* icon sizing */
+  .nav-cta .btn-whatsapp i {
+    font-size: 18px;
+    margin: 0;
+  }
+}
   /* ✅ MOBILE STACK FIX */
   .grid-2,
   .grid-3,
@@ -1977,19 +1990,6 @@ body {
 /* Smoother transitions everywhere */
 * {
   transition: all 0.25s ease;
-}
-
-/* 📱 MOBILE ONLY: Navbar WhatsApp icon only */
-@media (max-width: 768px) {
-
-  /* ✅ hide ONLY the text */
-  .nav-cta .btn-whatsapp i + * {
-    display: none;
-  }
-
-  .nav-cta .btn-whatsapp i {
-    font-size: 18px;
-  }
 }
 
 /* SAFE FIX */
