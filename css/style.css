@@ -1728,6 +1728,25 @@ blockquote::before {
   to { width: 100%; }
 }
 
+/* ===== MENU OVERLAY ===== */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(6px);
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.3s ease;
+  z-index: 498;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* ============================================================
    UTILITIES
    ============================================================ */
