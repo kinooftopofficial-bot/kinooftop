@@ -70,7 +70,7 @@
     });
   }
 
-  // ✅ ACTIVE LINK FIX (moved inside)
+  // ✅ Highlight active nav link (NOW INSIDE)
   const links = document.querySelectorAll('.nav-links a, .nav-mobile a');
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
