@@ -1757,17 +1757,22 @@ blockquote::before {
 
   /* 📱 MOBILE ONLY: clean WhatsApp icon button */
 @media (max-width: 768px) {
+
+  /* kill everything inside except the icon */
   .nav-cta .btn-whatsapp {
-    all: unset; /* nukes everything */
+    all: unset;
     cursor: pointer;
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 
-  .nav-cta .btn-whatsapp span {
-    display: none;
+  /* hide ALL text nodes */
+  .nav-cta .btn-whatsapp {
+    font-size: 0;
   }
 
+  /* restore icon size */
   .nav-cta .btn-whatsapp i {
     font-size: 22px;
     color: white;
