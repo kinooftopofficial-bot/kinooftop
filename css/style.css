@@ -232,12 +232,15 @@ body::after {
   background-clip: text;
   color: transparent;
   background-size: 200% auto;
+  transform: translateZ(0);
   animation: gradientShift 6s linear infinite;
 
   /* ✅ ADD THIS */
   display: inline-block;
   padding-right: 0.12em;
-   padding-bottom: 0.1em;  
+  padding-bottom: 0.1em;
+  white-space: nowrap;
+  overflow: visible;
 
   /* gradient fix */
   background-size: 200% 100%;
@@ -1189,6 +1192,7 @@ body::after {
   border-radius: 16px;
   background: rgba(255,255,255,.03);
   border: 1px solid var(--line);
+  overflow: visible;
 }
 
 .time-box .number {
