@@ -1982,14 +1982,6 @@ body {
 /* 📱 MOBILE ONLY: Navbar WhatsApp icon only */
 @media (max-width: 768px) {
 
-  .nav-cta .btn-whatsapp {
-    width: 42px;
-    height: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
   /* ✅ hide ONLY the text */
   .nav-cta .btn-whatsapp i + * {
     display: none;
@@ -1997,11 +1989,7 @@ body {
 
   .nav-cta .btn-whatsapp i {
     font-size: 18px;
-    margin: 0;
-    line-height: 1;
-    display: block;
   }
-
 }
 
 /* SAFE FIX */
