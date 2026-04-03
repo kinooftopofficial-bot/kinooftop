@@ -1765,6 +1765,7 @@ blockquote::before {
     display: flex;
     align-items: center;
     justify-content: center;
+    webkit-tap-highlight-color: transparent;
   }
 
   /* hide ALL text nodes */
@@ -1778,6 +1779,40 @@ blockquote::before {
     color: white;
   }
 }
+
+@media (max-width: 768px) {
+
+  .nav-cta .btn-whatsapp i {
+    font-size: 22px;
+    color: white;
+
+    /* 🔥 cinematic glow */
+    filter:
+      drop-shadow(0 0 4px rgba(255,255,255,0.6))
+      drop-shadow(0 0 8px rgba(168, 85, 247, 0.35))
+      drop-shadow(0 0 12px rgba(34, 211, 238, 0.25));
+
+    transition: all 0.3s ease;
+  }
+
+  .nav-cta .btn-whatsapp:hover i {
+    transform: scale(1.15);
+
+    filter:
+      drop-shadow(0 0 6px rgba(255,255,255,0.8))
+      drop-shadow(0 0 12px rgba(168, 85, 247, 0.5))
+      drop-shadow(0 0 18px rgba(34, 211, 238, 0.4));
+  }
+}
+
+@media (max-width: 768px) {
+
+  .nav-cta .btn-whatsapp:active i {
+    transform: scale(0.9);
+  }
+}
+
+   
    
   /* ✅ MOBILE STACK FIX */
   .grid-2,
